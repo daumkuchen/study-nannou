@@ -12,7 +12,7 @@ fn view(app: &App, frame: &Frame) {
     draw.background().color(BLACK);
 
     let tris = (1..win.w() as usize)
-        .flat_map(|i| {
+        .flat_map(|i|{
             let v1 = pt2(-100., -100.);
             let v2 = pt2( 100., -100.);
             let v3 = pt2( 100.,  100.);
@@ -20,7 +20,7 @@ fn view(app: &App, frame: &Frame) {
             geom::Quad([v1, v2, v3, v4]).triangles_iter()
         })
         .map(|tri| {
-            tri.map_vertices(|v| {
+            tri.map_vertices(|v|{
                 let r = 1.0;
                 let g = 1.0;
                 let b = 1.0;
